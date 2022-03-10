@@ -5,7 +5,7 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN apt update && apt-get install -y git libboost-all-dev wget sqlite3 autoconf sudo tzdata bsdmainutils
 
 WORKDIR /root
-RUN wget --quiet https://dl.google.com/go/go${GOLANG_VERSION}.linux-amd64.tar.gz && tar -xvf go${GOLANG_VERSION}.linux-amd64.tar.gz && mv go /usr/local
+RUN wget --quiet https://go.dev/dl/go1.17.8.linux-amd64.tar.gz && tar -xvf go1.17.8.linux-amd64.tar.gz && mv go /usr/local
 ENV GOROOT /usr/local/go
 ENV GOPATH /go
 ENV GOBIN /go/bin
